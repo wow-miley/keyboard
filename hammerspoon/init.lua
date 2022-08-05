@@ -12,6 +12,10 @@ keyUpDown = function(modifiers, key)
   hs.eventtap.keyStroke(modifiers, key, 0)
 end
 
+hs.urlevent.bind("test", function(eventName, params)
+  hs.alert.show("Received test")
+end) 
+
 -- Subscribe to the necessary events on the given window filter such that the
 -- given hotkey is enabled for windows that match the window filter and disabled
 -- for windows that don't match the window filter.
